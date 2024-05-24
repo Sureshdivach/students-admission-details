@@ -1,7 +1,7 @@
 #main_container{
     /* border: 1px solid gray; */
     display: flex;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(211, 208, 208); */
     gap: 10px ;
     padding: 20px ;
     width: 100%;
@@ -128,10 +128,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: large;
     font-weight: bold;
-    background-color: rgb(185, 247, 93);
-    color: rgb(4, 8, 248);
+    background-color: rgb(225, 187, 226);
+    color: rgb(13, 17, 245);
     border-radius: 20px;
-    border: none;
+    border:none;
 
 }
 #button button:hover{
@@ -194,6 +194,7 @@ table ,td,th{
          padding: 10px 0px;
      border-radius: 7px;
     }
+   
 }
 
 /* footer css--------------------------------------------------- */

@@ -59,15 +59,17 @@
   <div id="main_container">
 
     <div id="img">
-      <!-- <img src="https://rajras.in/wp-content/uploads/2017/10/Rajasthan-Police.png" alt="Rajasthan-Police"> -->
+    
       <img src="https://as1.ftcdn.net/v2/jpg/05/43/23/60/1000_F_543236066_U83eRI24qRG8zVasrlZ79Fui9kFgkOkO.jpg" alt="">
+  
     </div>
     <div id="form_div">
       <form id="form">
         <h1 class="heading"> Student Admission Form </h1>
-        <label>Name <span>*</span> :-</label><br> <input type="text" id="name" placeholder="Enter Your Name"> <br><br>
+        <label>Name <span>*</span> :-</label><br> <input type="text"  placeholder="Enter Your Name" id="name"  required >
+         <br><br>
         <label>Mobile<span>*</span> :-</label> <br><input type="text" id="mobile"
-          placeholder="Enter Mobile No."><br><br>
+          placeholder="Enter Mobile No."  ><br><br>
         <label>City<span>*</span> :-</label><br>
         <select id="City" required>
           <option value="select">---Select---</option>
@@ -174,10 +176,16 @@
   let form = document.getElementById("form")
   let btn = document.getElementById("btn")
   btn.addEventListener("click", getValue)
+ 
+    
+
+
   function getValue(event) {
     event.preventDefault()
+   
+   
     let obj = {
-      name: document.getElementById("name").value,
+      name: document.getElementById("name").value ,
       mobile: document.getElementById("mobile").value,
       City: document.getElementById("City").value,
       Course: document.getElementById("Course").value,
@@ -186,12 +194,19 @@
     }
     arr.push(obj)
     localStorage.setItem("userdata", JSON.stringify(arr))
+    dataDisplay(arr)
     form.reset()
     console.log(arr)
   }
+  
+  // -----------------------------------
 
+
+  
+  // -----------------------------
+ 
   function dataDisplay(data) {
-
+    table_div.innerHTML=""
     let div = document.getElementById("table_div")
     let table = document.createElement("table")
     let thead = document.createElement("thead")
@@ -214,7 +229,7 @@
     thead.append(tr)
 
     data.forEach((ele) => {
-
+     
 
       let tbody = document.createElement("tbody")
       let tr2 = document.createElement("tr")
